@@ -1,13 +1,13 @@
 :root {
-  --paper: #ece7dc;
-  --ink:   #2b2822;
-  --muted: #6f695c;
-  --faint: #a89f8d;
-  --green: #3a7050;
-  --dark:  #2f5c41;
-  --rose:  #b98a81;
-  --code:  #e0dac9;
-  --box:   rgba(185, 176, 156, 0.32);
+  --paper: #252b24;
+  --ink:   #e6dfd0;
+  --muted: #a29b87;
+  --faint: #6d6e5d;
+  --green: #7ca182;
+  --dark:  #5b7f66;
+  --rose:  #c69a8f;
+  --code:  #323930;
+  --box:   rgba(0, 0, 0, 0.28);
 }
 
 * { box-sizing: border-box; }
@@ -19,7 +19,7 @@ body {
   font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   font-size: 15px;
   line-height: 1.75;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='%23ffffff' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
   animation: fade 0.6s ease both;
 }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
@@ -162,11 +162,40 @@ h1.hero {
 
 /* --- content --------------------------------------------------------------- */
 
-.divider {
-  text-align: center;
+pre.trail {
+  color: var(--muted);
+  width: fit-content;
+  margin: 3.2rem auto;
+  font-size: 13px;
+  line-height: 1.4;
+  user-select: none;
+}
+
+pre.ledger {
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.6;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 1.1rem;
+  overflow-x: auto;
+}
+
+pre.fence {
   color: var(--green);
   font-size: 13px;
-  margin: 3.5rem 0;
+  line-height: 1;
+  margin: 0 0 1.1rem;
+  overflow-x: auto;
+}
+pre.fence.gate { margin: 1.1rem 0 0; }
+
+pre.night {
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+  width: fit-content;
+  margin: 0 auto 1.6rem;
   user-select: none;
 }
 

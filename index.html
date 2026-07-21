@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>elio</title>
 <meta name="description" content="elio is a small agent that keeps a portfolio of tokenized stocks balanced on Robinhood Chain.">
+<meta name="theme-color" content="#252b24">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -69,38 +70,60 @@
   </div>
   <p class="caption">elio, the donkey. rose hay is drift. the kill switch is real.</p>
 
-  <div class="divider" role="separator">,,//,,,,//,,,,//,,</div>
+  <pre class="trail" role="separator" aria-hidden="true">  ·
+,,
+      ·
+    ,,</pre>
 
   <h2>what</h2>
   <p>elio manages a small portfolio of tokenized stocks on Robinhood Chain. it watches prices and your holdings, notices when your mix drifts from the allocation you chose, and suggests trades to bring it back. you approve them, or let elio trade on its own inside strict limits.</p>
 
   <h2>how it works</h2>
 <pre class="diagram">watch prices
-     <span class="g">|</span>
+     <span class="m">,,</span>
 check drift <span class="g">-----</span> <span class="m">within targets</span> <span class="g">--&gt;</span> hold
-     <span class="g">|</span>
+     <span class="m">,,</span>
 suggest trade
-     <span class="g">|</span>
+     <span class="m">,,</span>
 check limits <span class="g">-----</span> <span class="m">fails a cap</span> <span class="g">---&gt;</span> blocked
-     <span class="g">|</span>
+     <span class="m">,,</span>
 execute
-     <span class="g">|</span>
+     <span class="m">,,</span>
 report <span class="g">-----------</span> <span class="m">kill switch always armed</span></pre>
 
   <h2>example</h2>
-  <p>you choose a target mix. elio holds it there.</p>
-<pre class="diagram">apple   <span class="g">++++++++++</span><span class="f">··········</span>  <span class="m">50%</span>
-nvidia  <span class="g">++++++</span><span class="f">··············</span>  <span class="m">30%</span>
-cash    <span class="g">++++</span><span class="f">················</span>  <span class="m">20%</span>
-
-<span class="m">nvidia runs to 40%</span> <span class="g">--&gt;</span> trim nvidia, buy apple</pre>
-  <p>until the mix is back where you set it. every step shown, nothing hidden.</p>
+  <p>a page from the ledger. every trade elio makes, and every one it refuses, is written down like this.</p>
+<pre class="ledger"><span class="g"><span class="r">+</span>·+·+·+·+·+·+·+·+·+·+·+·+·+·+·+·+·+·+·+·<span class="r">+</span></span>
+<span class="f">·</span>  one afternoon in the meadow           <span class="f">·</span>
+<span class="f">·</span>                                        <span class="f">·</span>
+<span class="f">·</span>  <span class="f">14:02</span>  nvda drifted to <span class="r">40%</span>            <span class="f">·</span>
+<span class="f">·</span>  <span class="f">14:02</span>  trim nvda -5%          <span class="m">ok</span>      <span class="f">·</span>
+<span class="f">·</span>  <span class="f">14:03</span>  feed aapl +5%          <span class="m">ok</span>      <span class="f">·</span>
+<span class="f">·</span>  <span class="f">14:19</span>  nvda drifted to <span class="r">45%</span>            <span class="f">·</span>
+<span class="f">·</span>  <span class="f">14:19</span>  trim nvda -15%         <span class="r">blocked</span> <span class="f">·</span>
+<span class="f">·</span>         <span class="f">exceeds the per-trade cap</span>      <span class="f">·</span>
+<span class="f">·</span>  <span class="f">14:19</span>  trim nvda -5%          <span class="m">ok</span>      <span class="f">·</span>
+<span class="f">·</span>  <span class="f">15:04</span>  balanced. elio grazes.         <span class="f">·</span>
+<span class="g"><span class="r">+</span>·+·+·+·+·+·+·+·+·+·+·+·+·+·+·+·+·+·+·+·<span class="r">+</span></span></pre>
+  <p>the big trade got refused, so elio took the small one instead. limits are not advice. they are walls.</p>
 
   <h2>limits</h2>
-  <p>every trade passes through your caps before it goes anywhere. a per-trade cap, a daily cap, and a loss limit. if a trade fails any of them, it does not happen. <em>nothing moves without your limits.</em> and there is a kill switch: one action stops elio completely.</p>
+  <p>elio lives inside a paddock you build.</p>
+<pre class="fence">|----|----|----|----|----|----|----|----|----|----|----|----|</pre>
+  <p>every trade passes through your caps before it goes anywhere. a per-trade cap, a daily cap, and a loss limit. if a trade fails any of them, it does not happen. <em>nothing moves without your limits.</em></p>
+<pre class="fence gate">|----|----|----|--<span class="m">  gate: the kill switch  </span>--|----|----|----|</pre>
+  <p class="caption">one action opens the gate, and elio stops completely.</p>
 
-  <div class="divider" role="separator">,,//,,,,//,,,,//,,</div>
+  <pre class="trail" role="separator" aria-hidden="true">  ·
+,,
+      ·
+    ,,</pre>
 
+  <pre class="night" aria-label="elio asleep in the grass under the stars"><span class="f">    ·          ˙            ·</span>
+<span class="f">˙        ·</span>          <span class="r">z</span>
+   <span class="k">\/\/</span>          <span class="r">z</span>
+  <span class="k">(-_)_______</span>
+<span class="g">,,//,,,,//,,,,//,,,,//,,</span></pre>
   <footer>elio &middot; stitched by hand</footer>
 
 </main>
