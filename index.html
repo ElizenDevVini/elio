@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>elio</title>
+<meta name="description" content="elio is a small agent that keeps a portfolio of tokenized stocks balanced on Robinhood Chain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+  <nav>
+    <a href="index.html" class="here">home</a>
+    <a href="https://github.com/ElizenDevVini/elio">github</a>
+  </nav>
+
+  <pre class="mascot" aria-label="a small duck">
+      __
+   <span class="nose">&lt;</span>(o )___
+    (  ._&gt; /
+     `---'</pre>
+
+  <h1 class="hero">elio</h1>
+  <p class="tagline">a small agent that keeps your portfolio balanced.</p>
+
+  <hr class="rule">
+
+  <h2>what</h2>
+  <p>elio manages a small portfolio of tokenized stocks on Robinhood Chain. it watches prices and your holdings, notices when your mix drifts from the allocation you chose, and suggests trades to bring it back. you approve them, or let elio trade on its own inside strict limits.</p>
+
+  <h2>how it works</h2>
+  <ul>
+    <li>watches stock-token prices and your portfolio.</li>
+    <li>checks whether your holdings have drifted from your target allocation.</li>
+    <li>suggests which tokens to buy or sell.</li>
+    <li>checks every trade against your spending, risk, and loss limits.</li>
+    <li>executes approved trades, or trades automatically within those limits.</li>
+    <li>shows exactly what it did. you can stop it instantly.</li>
+  </ul>
+
+  <h2>example</h2>
+  <p>you choose <code>50% apple</code> <code>30% nvidia</code> <code>20% cash</code>. nvidia runs up and becomes 40% of the portfolio. elio sells some nvidia and buys apple, or holds cash, until the mix is back where you set it.</p>
+
+  <h2>limits</h2>
+  <p>every trade passes through your caps before it goes anywhere. a per-trade cap, a daily cap, and a loss limit. if a trade fails any of them, it does not happen. <em>nothing moves without your limits.</em> and there is a kill switch: one action stops elio completely.</p>
+
+  <hr class="rule">
+
+  <footer>elio · built by hand</footer>
+
+</main>
+</body>
+</html>
