@@ -4,6 +4,7 @@
   --muted: #6f695c;
   --faint: #a89f8d;
   --green: #3a7050;
+  --dark:  #2f5c41;
   --rose:  #b98a81;
   --code:  #e0dac9;
   --box:   rgba(185, 176, 156, 0.32);
@@ -35,10 +36,24 @@ nav a:hover { color: var(--green); }
 nav a.here { color: var(--ink); }
 nav a.here::before { content: "+ "; color: var(--rose); }
 
-/* --- ornamental frame ---------------------------------------------------- */
+/* --- stitched ascii art --------------------------------------------------- */
+
+pre.stitch {
+  width: fit-content; margin: 0 auto;
+  color: var(--green);
+  font-size: clamp(6.5px, 1.85vw, 12px);
+  line-height: 1.25;
+  letter-spacing: 0;
+  user-select: none;
+}
+.stitch .r, .r { color: var(--rose); }
+.stitch .d, .d { color: var(--dark); }
+.stitch .k, .k { color: var(--ink); }
+.m { color: var(--muted); }
+.f { color: var(--faint); }
+.g { color: var(--green); }
 
 .frame { position: relative; }
-.frame svg { display: block; width: 100%; height: auto; }
 
 .frame-content {
   position: absolute; inset: 0;
@@ -87,12 +102,23 @@ h1.hero {
   text-align: left;
 }
 
-/* --- content ------------------------------------------------------------- */
+.donkey-art { margin-top: 4rem; }
+
+.caption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 1.2rem 0 0;
+}
+
+/* --- content --------------------------------------------------------------- */
 
 .divider {
   text-align: center;
   color: var(--green);
-  font-size: 14px;
+  font-size: 13px;
   margin: 3.5rem 0;
   user-select: none;
 }
@@ -103,6 +129,14 @@ h2 {
   margin: 3.5rem 0 1rem;
 }
 h2::before { content: "+ "; color: var(--rose); letter-spacing: 0; margin-right: 0.4em; }
+
+pre.diagram {
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 1.1rem;
+  overflow-x: auto;
+}
 
 p, li { margin: 0 0 1.1rem; }
 ul { padding-left: 1.4rem; }
