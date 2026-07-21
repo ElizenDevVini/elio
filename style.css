@@ -102,7 +102,54 @@ h1.hero {
   text-align: left;
 }
 
-.donkey-art { margin-top: 4rem; }
+/* --- the meadow ------------------------------------------------------------ */
+
+.meadow {
+  width: 100vw;
+  margin: 4rem 0 0 calc(50% - 50vw);
+  overflow: hidden;
+}
+.scene {
+  margin: 0;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 15px;
+  white-space: pre;
+  user-select: none;
+  min-height: 225px;
+}
+.meadow-bar {
+  max-width: 640px;
+  margin: 0.8rem auto 0;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.scene-log {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--ink);
+  min-height: 4.7em;
+}
+#kill {
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  background: none;
+  border: 1px dashed var(--faint);
+  color: var(--muted);
+  padding: 0.3em 0.8em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#kill:hover { color: var(--rose); border-color: var(--rose); }
+
+.st { opacity: 0; animation: stitch 0.35s ease forwards; }
+@keyframes stitch { to { opacity: 1; } }
+
+::selection { background: var(--rose); color: var(--paper); }
 
 .caption {
   text-align: center;

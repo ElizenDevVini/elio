@@ -8,7 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Crect width=%2716%27 height=%2716%27 fill=%27%23ece7dc%27/%3E%3Ctext x=%278%27 y=%2712.5%27 text-anchor=%27middle%27 font-size=%2712%27 fill=%27%233a7050%27%3E+%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 <main>
@@ -58,25 +60,14 @@
     </div>
   </div>
 
-  <pre class="stitch donkey-art" aria-label="a small stitched donkey standing on grass">
-         •                •
-         ·••            ·••
-           ••          •·•
-            ·••      ·•••
-             ·•••   ·••·   <span class="r">x</span> <span class="m">I</span> <span class="r">x</span> <span class="m">I</span>
-          ·•·•·•    ••
-        ·•  <span class="k">•</span>       •                   •
-        •          ·••··•··•··•·•··   ·•·
-        ··•·     •••              ·•·•·
-            •·•·· •                ·•
-                  •                ·•
-                  •·              ·•
-                   •••·••··•··•··••
-                   •   •      •   •
-                   •   •      •   •
-                   •·  •      •   •
-,,,,//,,//,,,,//,,//,,,,,,,,,,,,//,,,,,,//,,,,</pre>
-  <p class="caption">elio, the donkey. small, stubborn about your limits.</p>
+  <div class="meadow">
+    <pre class="scene" id="scene" aria-label="elio the donkey tending three hay piles that mirror the portfolio"></pre>
+    <div class="meadow-bar">
+      <div class="scene-log" id="log" aria-live="polite"></div>
+      <button id="kill" type="button">[ kill switch ]</button>
+    </div>
+  </div>
+  <p class="caption">elio, the donkey. rose hay is drift. the kill switch is real.</p>
 
   <div class="divider" role="separator">,,//,,,,//,,,,//,,</div>
 
